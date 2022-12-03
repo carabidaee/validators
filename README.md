@@ -31,7 +31,7 @@ $emailValidator->checkMXRecords = false; // Disabling verification of MX records
 
 if (!$emailValidator->validate($emailsList)) {
     foreach ($emailValidator->getErrors() as $error) {
-        echo "Email {$error->email} incorrect: {$error->errorText}\n";
+        echo "Email {$error['email']} incorrect: {$error['errorText']}\n";
     }
 }
 

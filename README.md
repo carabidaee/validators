@@ -1,16 +1,10 @@
 # Validators
 
----
-
 ## Requirements
-
----
 
 * PHP >= 8.0
 
 ## Installation
-
----
 
 Add `carabidaee/validators` as a require dependency in your `composer.json` file:
 
@@ -20,13 +14,9 @@ composer require carabidaee/validators
 
 ## List of validators
 
----
-
 * EmailValidator
 
 ## Usage
-
----
 
 Example of using EmailValidator: 
 

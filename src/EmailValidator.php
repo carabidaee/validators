@@ -22,18 +22,7 @@ class EmailValidator
         }
         $this->emails = $data;
 
-        $isValidFormat = $this->validateFormat();
-
-        $isValidMX = true;
-        if ($this->checkMXRecords) {
-            $isValidMX = $this->validateMX();
-        }
-
-        if (!$isValidFormat || !$isValidMX) {
-            return false;
-        }
-
-        return true;
+        return $this->validateFormat() && (!$this->checkMXRecords || $this->validateMX());
     }
 
     public function getErrors(): ?array
